@@ -109,6 +109,8 @@ Connection: keep-alive
 </html>
 ```
 
+```this response, due to inclusion of the html```
+
 ```
 DELETE /students/n1vmyrw3x HTTP/1.1
 Host: g22-students.herokuapp.com
@@ -116,10 +118,11 @@ Accept: application/json
 Cache-Control: no-cache
 Postman-Token: 0041e3c3-efdb-f0c3-b2f4-2d79f6d0f44b
 ```
+```this is a request, due to the delete verb being passed```
 
 __JSON__
 
-* Describe what JSON is.  What is it used for.
+* Describe what JSON is.  What is it used for. ```javascript object notation; used for creating transmittable objects of key-value pairs```
 * Convert the following map into a javascript object then console log the age.
 
 ```
@@ -146,7 +149,7 @@ var myObj = {
 ```
 __MISC__
 
-* Describe what DNS is.
+* Describe what DNS is. ```domain name system; converts IP addresses to human-readable format```
 * In the terminal, type `man curl`.  Look at the man page for curl.  What do the following flags do? `-v`, `-X`.  (Hint: to search for a string, type `/` then the text you want, then enter.  To quit the man page, type `q`).
-* What is TCP/IP?  How does it interact with HTTP?
-* Does HTTP break the data that is being sent into small packets?  If not, what protocol is responsible for it?
+* What is TCP/IP?  How does it interact with HTTP? ```TCP/IP is transmission control protocol / internet protocol; http intereacts with ip for packet routing and other things```
+* Does HTTP break the data that is being sent into small packets?  If not, what protocol is responsible for it? ```ip handles that```
