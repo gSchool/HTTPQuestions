@@ -98,19 +98,24 @@ __JSON__
 * Convert the following map into a javascript object then console log the age.
 
 ```
-var company = JSON.parse{ "company" : "Github", "age": 7, "categories" : "Services,Internet,Software"}
+var company = JSON.parse('{ "company" : "Github", "age": 7, "categories" : "Services,Internet,Software"}')
 console.log(company.age);
 
 ```
 * Convert the following to a javascript object.  Console log each company name.
 
 ```
-{ "Companies":[ { "company": "Github", "age": 7, "categories": "Services,Internet,Software"},
+var companies= JSON.parse('{ "Companies":[ { "company": "Github", "age": 7, "categories": "Services,Internet,Software"},
               { "company": "Airbnb", "age": 6, "categories": "Hotels,Travel"},
               { "company": "Square", "age": 7, "categories": "FinTech,Hardware + Software,Finance"},
               { "company": "Dropbox", "age": 11, "categories": "Cloud Data Services,Storage,Web Hosting"}
             ]
-}
+}')
+
+for (var company in companies) {
+	console.log(company);
+};
+
 ```
 * The following is javascript.  Convert the object to a string and console log it.
 
@@ -120,10 +125,20 @@ var myObj = {
   age: 3,
   categories: "Education"
 };
+
+var myObjJSON = JSON.stringify(myObj);
+console.log(myObjJSON.stringify);
+
 ```
 __MISC__
 
 * Describe what DNS is.
+```stands for Domain Name Service, and it controls the translating of IP addresses to human-readable domain names"```
+
 * In the terminal, type `man curl`.  Look at the man page for curl.  What do the following flags do? `-v`, `-X`.  (Hint: to search for a string, type `/` then the text you want, then enter.  To quit the man page, type `q`).
+``` I think that the -v flag returns more information on the GET request than normal. According to explainshell.com, the -X flag "Specifies  a  custom  request  method to use when communicating with the HTTP server. The specified request will be used instead of the method otherwise used (which defaults to GET)." ```
+
 * What is TCP/IP?  How does it interact with HTTP?
+``` TCP stands for 'transmission control protocol', and it ensures that data is communicated between servers quickly and reliably. From my understanding, TCP controls the transmission of data between servers (underground, in a metaphorical sense), while HTTP works on the surface to bring the data to the web application. ```
 * Does HTTP break the data that is being sent into small packets?  If not, what protocol is responsible for it?
+``` No, the TCP is responsible for breaking the data into smaller chunks ```
