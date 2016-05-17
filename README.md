@@ -10,7 +10,7 @@ __URLs__
 	* `https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_Error`
 * Can a server use more than 1 port?
 * Why is https different than http?
-* How does a server interpret the following url's query paramter.  What data structure does it create on the server?
+* How does a server interpret the following url's query parameter.  What data structure does it create on the server?
 
 ```
 http://locahost:5000/animals?puppies=fido&puppies=max&puppies=moxie
@@ -19,17 +19,30 @@ http://locahost:5000/animals?puppies=fido&puppies=max&puppies=moxie
 __HTTP Request/Response__
 
 * Name at least 4 http verbs
+	Get, Post, Update, Delete
 * What is each verb useful for in your own words
+	Get info from server
+	Put information on the server
+	Change information on the server
+	Delete information on the server
 * What does idempotent mean?
+		denoting an element of a set that is unchanged in value when multiplied or otherwise operated on by itself.
 * Name the 5 http status code ranges.  What are they used for in general?
+	Accept
+	Content-type
+	Cookie
+	User Agent
+	Cache-control
+
 * If a server returns a http status code of 301 and a location of `https://www.google.com/`, what does the browser do?
+		It autamatically redirects into the new URL location
 * For the following HTTP headers, decide if the following header is used for requests, responses or both:
-	* Accept
-	* Content-type
-	* User-agent
-	* Set-cookies
-	* Cache-control
-	* Cookie
+	* Accept - requests
+	* Content-type - both
+	* User-agent - request
+	* Set-cookies - both
+	* Cache-control - both
+	* Cookie - both
 * Is the following a http request or response?  How do you know for each?
 
 ```
@@ -52,21 +65,21 @@ Connection: keep-alive
   <body>
     <main>
       <h1>Student Roster</h1>
-      
+
         <section>
           <h3>Daenerys Targaryen</h3>
           <span>Student Id: nys8fbohl</span>
           <h4>Hobby: Motherhood</h4>
           <img src="https://i.imgur.com/KlycRG5.jpg" alt="Daenerys Targaryen" />
         </section>
-      
+
         <section>
           <h3>Tyrion Lannister</h3>
           <span>Student Id: njehukbohe</span>
           <h4>Hobby: Traveling</h4>
           <img src="https://i.imgur.com/fFMusdC.png" alt="Tyrion Lannister" />
         </section>
-      
+
     </main>
   </body>
 </html>
@@ -83,8 +96,14 @@ Postman-Token: 0041e3c3-efdb-f0c3-b2f4-2d79f6d0f44b
 __JSON__
 
 * Describe what JSON is.  What is it used for.
+	javascript Object Notation. Used to structure data
 * Convert the following map into a javascript object then console log the age.
-
+	github = {
+		 "company" : "Github",
+		 "age": 7,
+		 "categories" : "Services,Internet,Software"
+	 }
+	 console.log(github.age)
 ```
 { "company" : "Github", "age": 7, "categories" : "Services,Internet,Software"}
 ```
@@ -110,6 +129,51 @@ var myObj = {
 __MISC__
 
 * Describe what DNS is.
+Domain Name System
 * In the terminal, type `man curl`.  Look at the man page for curl.  What do the following flags do? `-v`, `-X`.  (Hint: to search for a string, type `/` then the text you want, then enter.  To quit the man page, type `q`).
+-v, --verbose
+						 <!-- -v Be  more  verbose/talkative  during  the  operation.  Useful for
+						debugging and seeing what's going on "under the  hood".  A  line
+						starting  with  '>'  means "header data" sent by curl, '<' means
+						"header data" received by curl that is hidden in  normal  cases,
+						and  a  line starting with '*' means additional info provided by
+						curl.
+
+						Note that if you only want  HTTP  headers  in  the  output,  -i,
+						--include might be the option you're looking for.
+
+						If  you think this option still doesn't give you enough details,
+						consider using --trace or --trace-ascii instead.
+
+						This option overrides previous uses of --trace-ascii or --trace.
+
+						Use -s, --silent to make curl quiet.
+
+              -x Use the specified proxy.
+
+              The  proxy  string can be specified with a protocol:// prefix to
+              specify alternative proxy protocols. Use socks4://,  socks4a://,
+              socks5:// or socks5h:// to request the specific SOCKS version to
+              be used. No protocol specified, http:// and all others  will  be
+              treated as HTTP proxies. (The protocol support was added in curl
+              7.21.7)
+
+              If the port number is not specified in the proxy string,  it  is
+              assumed to be 1080.
+
+              This  option  overrides  existing environment variables that set
+              the proxy to use. If there's an environment variable  setting  a
+              proxy, you can set proxy to "" to override it.
+
+              All operations that are performed over an HTTP proxy will trans-
+              parently be converted to HTTP. It means  that  certain  protocol
+              specific operations might not be available. This is not the case
+              if you can tunnel through the proxy, as one with the -p, --prox-
+              ytunnel option.
+							 -->
+
+
 * What is TCP/IP?  How does it interact with HTTP?
+		TCP/IP (Transmission Control Protocol/Internet Protocol) is the basic communication language or protocol of the Internet. TCP/IP is the how things are supposed to communicate between one another, HTTP is data sent over the TCP/IP protocol to be viewed in a browser.
 * Does HTTP break the data that is being sent into small packets?  If not, what protocol is responsible for it?
+		TCP is responsible for breaking data down into IP packets before they are sent, and for assembling the packets when they arrive.
