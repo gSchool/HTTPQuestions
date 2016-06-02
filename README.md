@@ -80,8 +80,8 @@ __HTTP Request/Response__
 1. Post
 2. Get
 3. Put
-4. Patch
-5. Delete
+4.  Delete
+
 
 * What is each verb useful for in your own words
 
@@ -89,10 +89,10 @@ __HTTP Request/Response__
 
 2. Get: Read; is used to read or retrieve the representation of a resource and data and no change it.
 
-3. Put: Update/Replace;
+3. Put: Update/Replace; updates capabilities, putting to a known resource URI with the request body containing the newly updated representation of the original resource.
 
-4. Patch
-5. Delete
+
+5. Delete: is used to delete a resource identified by the request URI.
 
 * What does idempotent mean?
 * Name the 5 http status code ranges.  What are they used for in general?
