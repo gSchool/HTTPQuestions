@@ -121,7 +121,7 @@ The browser should automatically redirect to the new location of the requested U
 	* User-agent: Request;
 
 	* Set-cookies: Response;
-	
+
 	* Cache-control: both;
 
 	* Cookie: request
@@ -137,6 +137,7 @@ Content-Length: 722
 ETag: W/"2d2-Wu0We9N5g35FXWY+gOATLA"
 Date: Tue, 08 Mar 2016 20:37:11 GMT
 Connection: keep-alive
+
 
 <!DOCTYPE html>
 <html>
@@ -167,6 +168,8 @@ Connection: keep-alive
   </body>
 </html>
 ```
+
+This is a response that was Successful, Because in the first line of the code above of the html code there is a "200 OK" code that indicates that the request has succeeded and that's why we received as an answer the html with the information requested. 
 
 ```
 DELETE /students/n1vmyrw3x HTTP/1.1
