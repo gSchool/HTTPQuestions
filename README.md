@@ -80,7 +80,7 @@ __HTTP Request/Response__
 1. Post
 2. Get
 3. Put
-4.  Delete
+4. Delete
 
 
 * What is each verb useful for in your own words
@@ -95,15 +95,37 @@ __HTTP Request/Response__
 5. Delete: is used to delete a resource identified by the request URI.
 
 * What does idempotent mean?
+ An idempotent operation is one that has no additional effect if it is called more than once with the same input parameters.
+
 * Name the 5 http status code ranges.  What are they used for in general?
+
+1. Informational 1xx: indicates a provisional response, consisting only of the Status-Line and optional headers, and is terminated by an empty line. There are no required headers for this class of status code.
+
+2. Successful 2xx: this class of status code indicates that the client's request was Successfully received, understood and accepted.
+
+3. Redirection 3xx: this class of status code indicates that further action needs to be taken by the user agent in order to fulfill the request.
+
+4. Client error 4xx: The 4xx class of status code is intended for cases in which the client seems to have erred. Except when the responding to a head request, the server should include an entity containing an explanation of the error situation, and whether it is a temporary or permanent condition.
+
+5. Server Error 5xx: Response status codes beginning with the digit "5" indicate cases in which the server is aware that it has erred or is incapable of performing the request. Except when responding to a HEAD request, the server SHOULD include an entity containing an explanation of the error situation, and whether it is a temporary or permanent condition. User agents SHOULD display any included entity to the user. These response codes are applicable to any request method.
+
 * If a server returns a http status code of 301 and a location of `https://www.google.com/`, what does the browser do?
+
+The browser should automatically redirect to the new location of the requested URI, if given. The new permanent URI SHOULD be given by the Location field in the response.
+
 * For the following HTTP headers, decide if the following header is used for requests, responses or both:
-	* Accept
-	* Content-type
-	* User-agent
-	* Set-cookies
-	* Cache-control
-	* Cookie
+	* Accept: Response;
+
+	* Content-type:both;
+
+	* User-agent: Request;
+
+	* Set-cookies: Response;
+	
+	* Cache-control: both;
+
+	* Cookie: request
+
 * Is the following a http request or response?  How do you know for each?
 
 ```
