@@ -169,7 +169,7 @@ Connection: keep-alive
 </html>
 ```
 
-This is a response that was Successful, Because in the first line of the code above of the html code there is a "200 OK" code that indicates that the request has succeeded and that's why we received as an answer the html with the information requested. 
+This is a response that was Successful, Because in the first line of the code above of the html code there is a "200 OK" code that indicates that the request has succeeded and that's why we received as an answer the html with the information requested.
 
 ```
 DELETE /students/n1vmyrw3x HTTP/1.1
@@ -178,14 +178,26 @@ Accept: application/json
 Cache-Control: no-cache
 Postman-Token: 0041e3c3-efdb-f0c3-b2f4-2d79f6d0f44b
 ```
+this is a response with the "Delete" code that indicates that The requested resource is no longer available at the server and no forwarding address is known. This condition is expected to be considered permanent.
 
 __JSON__
 
 * Describe what JSON is.  What is it used for.
+JSON is a javascript Object Notation and is use as a data interchange format.
+
 * Convert the following map into a javascript object then console log the age.
 
 ```
 { "company" : "Github", "age": 7, "categories" : "Services,Internet,Software"}
+
+
+var myArray= JSON.parse('{ "company" : "Github", "age": 7, "categories" : "Services,Internet,Software"}');
+
+
+	console.log(myArray.age);
+
+
+
 ```
 * Convert the following to a javascript object.  Console log each company name.
 
@@ -196,6 +208,26 @@ __JSON__
               { "company": "Dropbox", "age": 11, "categories": "Cloud Data Services,Storage,Web Hosting"}
             ]
 }
+
+//////answer/////
+
+var myArray= JSON.stringify({"Companies":[
+			{ "company": "Github", "age": 7, "categories": "Services,Internet,Software"},
+              { "company": "Airbnb", "age": 6, "categories": "Hotels,Travel"},
+              { "company": "Square", "age": 7, "categories": "FinTech,Hardware + Software,Finance"},
+              { "company": "Dropbox", "age": 11, "categories": "Cloud Data Services,Storage,Web Hosting"}
+            ]});
+
+var myObj= JSON.parse(myArray);
+
+var comp= myObj.Companies
+
+for(var i=0; i < comp.length; i++){
+	console.log(comp[i].company);
+}
+/////////////
+
+
 ```
 * The following is javascript.  Convert the object to a string and console log it.
 
