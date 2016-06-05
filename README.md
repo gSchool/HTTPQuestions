@@ -237,10 +237,32 @@ var myObj = {
   age: 3,
   categories: "Education"
 };
+
+
+//////answer////
+
+var myObj = JSON.stringify({
+  company: "Galvanize",
+  age: 3,
+  categories: "Education"
+});
+
+console.log(myObj)
+/////////////
+
+
+
 ```
 __MISC__
 
 * Describe what DNS is.
+Domain Name Servers (DNS) are the Internet's equivalent of a phone book. They maintain a directory of domain names and translate them to Internet Protocol (IP) addresses. This is necessary because, although domain names are easy for people to remember, computers or machines, access websites based on IP addresses.
+
 * In the terminal, type `man curl`.  Look at the man page for curl.  What do the following flags do? `-v`, `-X`.  (Hint: to search for a string, type `/` then the text you want, then enter.  To quit the man page, type `q`).
+
+-v: Useful for debugging and seeing what's going on "under the  hood".
+
+-X: request <command>  (HTTP) Specifies a custom request method to use when communicating  with the HTTP server.  The specified request method will be used instead of the method otherwise  used  (which  defaults  to GET).  
+
 * What is TCP/IP?  How does it interact with HTTP?
 * Does HTTP break the data that is being sent into small packets?  If not, what protocol is responsible for it?
