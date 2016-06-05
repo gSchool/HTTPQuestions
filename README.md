@@ -265,4 +265,15 @@ Domain Name Servers (DNS) are the Internet's equivalent of a phone book. They ma
 -X: request <command>  (HTTP) Specifies a custom request method to use when communicating  with the HTTP server.  The specified request method will be used instead of the method otherwise  used  (which  defaults  to GET).  
 
 * What is TCP/IP?  How does it interact with HTTP?
+
+-TCP/IP or Transmission Control Protocol/Internet Protocol, is a set of networking protocols that allows two or more computers to communicate. The TCP/IP has 4 layers that are use to flow the information:
+- application layer;
+- Transport layer;
+- network layer;
+- data link layer;
+
+The application layer of TCP/IP protocol suite is the top layer and includes applications that use transport layer protocols to deliver the data to destination computers. The Hypertext Transfer Protocol (HTTP) is used to transfer files that make up the Web pages of the World Wide Web.
+
 * Does HTTP break the data that is being sent into small packets?  If not, what protocol is responsible for it?
+
+No, The HTTP layer is no responsible for that. That is the TCP Transport layer's work. The TCP divides the data coming from the application layer into proper sized chunks and then passes these chunks onto the network.
